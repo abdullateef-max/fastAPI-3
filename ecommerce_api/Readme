@@ -129,3 +129,96 @@ Body (form-data):
 product_id: 1
 
 quantity: 2
+
+
+# Database Models
+Product
+id: Integer (Primary Key)
+
+name: String (Indexed)
+
+price: Float
+
+stock: Integer
+
+User
+id: Integer (Primary Key)
+
+username: String (Unique, Indexed)
+
+email: String (Unique)
+
+password: String (Hashed)
+
+is_admin: Boolean
+
+Security Features
+Password hashing with bcrypt
+
+JWT token authentication
+
+Admin-only endpoints protection
+
+Input validation
+
+SQL injection prevention through SQLModel
+
+Error Handling
+The API returns appropriate HTTP status codes:
+
+200: Success
+
+400: Bad Request
+
+401: Unauthorized
+
+403: Forbidden
+
+404: Not Found
+
+500: Internal Server Error
+
+Development
+Adding New Features
+Create new models in models/database.py
+
+Add routes in appropriate router files
+
+Update authentication if needed in utils/auth.py
+
+Test endpoints using Postman or the interactive docs
+
+Testing
+Use the built-in FastAPI interactive documentation:
+
+Swagger UI: http://localhost:8000/docs
+
+ReDoc: http://localhost:8000/redoc
+
+Production Deployment
+For production deployment, consider:
+
+Using a production-grade ASGI server (Gunicorn + Uvicorn)
+
+Setting proper CORS settings
+
+Using environment variables for secrets
+
+Implementing rate limiting
+
+Adding proper logging
+
+Using a production database (PostgreSQL, MySQL)
+
+Setting up SSL/TLS encryption
+
+Troubleshooting
+Common Issues
+Import errors: Make sure all __init__.py files exist
+
+Database issues: Delete database.db and restart the application
+
+JWT errors: Check token expiration and secret key configuration
+
+Logs
+Check the console output for detailed error messages and debugging information.
