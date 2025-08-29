@@ -1,0 +1,76 @@
+# Job Application Tracker
+
+A FastAPI application for tracking job applications with authentication.
+
+## Setup
+
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+Run the application:
+
+bash
+uvicorn app.main:app --reload
+Access the API documentation:
+
+Swagger UI: http://localhost:8000/docs
+
+
+API Usage
+Create a user:
+
+bash
+POST /users/
+{
+  "username": "your_username",
+  "email": "your_email@example.com",
+  "password": "your_password"
+}
+Get an access token:
+
+bash
+POST /token
+Content-Type: application/x-www-form-urlencoded
+
+username=your_username&password=your_password
+Use the token to access protected endpoints (add to headers):
+
+text
+Authorization: Bearer <your_token>
+User-Agent: Postman (or any value)
+Create a job application:
+
+bash
+POST /applications/
+{
+  "company": "Tech Corp",
+  "position": "Software Developer",
+  "status": "applied",
+  "date_applied": "2023-10-15"
+}
+Search applications by status:
+
+bash
+GET /applications/search?status=applied
+text
+
+## How to Run
+
+1. Create the project structure and files as shown above
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+Run the application:
+
+bash
+uvicorn app.main:app --reload
+Open your browser to http://localhost:8000/docs to see the API documentation
+
+Testing with Postman
+First, create a user at POST /users/
+
+Get a token at POST /token (use form-data with username and password)
+
+Use the token in the Authorization header (Bearer token) for all other requests
+
+Make sure to include a User-Agent header with any value
