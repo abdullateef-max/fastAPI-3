@@ -1,0 +1,100 @@
+2025-08-29 19:00:09,553 - INFO - BEGIN (implicit)
+2025-08-29 19:00:09,553 - INFO - PRAGMA main.table_info("student")
+2025-08-29 19:00:09,553 - INFO - [raw sql] ()
+2025-08-29 19:00:09,554 - INFO - PRAGMA temp.table_info("student")
+2025-08-29 19:00:09,554 - INFO - [raw sql] ()
+2025-08-29 19:00:09,554 - INFO - PRAGMA main.table_info("user")
+2025-08-29 19:00:09,554 - INFO - [raw sql] ()
+2025-08-29 19:00:09,554 - INFO - PRAGMA temp.table_info("user")
+2025-08-29 19:00:09,554 - INFO - [raw sql] ()
+2025-08-29 19:00:09,555 - INFO - 
+CREATE TABLE student (
+	id INTEGER NOT NULL, 
+	name VARCHAR NOT NULL, 
+	age INTEGER NOT NULL, 
+	email VARCHAR NOT NULL, 
+	grades VARCHAR NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-08-29 19:00:09,555 - INFO - [no key 0.00009s] ()
+2025-08-29 19:00:09,556 - INFO - CREATE UNIQUE INDEX ix_student_email ON student (email)
+2025-08-29 19:00:09,556 - INFO - [no key 0.00013s] ()
+2025-08-29 19:00:09,558 - INFO - CREATE INDEX ix_student_name ON student (name)
+2025-08-29 19:00:09,558 - INFO - [no key 0.00010s] ()
+2025-08-29 19:00:09,560 - INFO - 
+CREATE TABLE user (
+	id INTEGER NOT NULL, 
+	username VARCHAR NOT NULL, 
+	email VARCHAR NOT NULL, 
+	hashed_password VARCHAR NOT NULL, 
+	is_active BOOLEAN NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-08-29 19:00:09,560 - INFO - [no key 0.00018s] ()
+2025-08-29 19:00:09,561 - INFO - CREATE UNIQUE INDEX ix_user_username ON user (username)
+2025-08-29 19:00:09,561 - INFO - [no key 0.00012s] ()
+2025-08-29 19:00:09,562 - INFO - CREATE UNIQUE INDEX ix_user_email ON user (email)
+2025-08-29 19:00:09,562 - INFO - [no key 0.00008s] ()
+2025-08-29 19:00:09,563 - INFO - COMMIT
+2025-08-29 19:01:42,369 - INFO - Request: {'timestamp': '2025-08-29T19:01:42.369290', 'method': 'GET', 'url': 'http://127.0.0.1:8000/', 'client_host': '127.0.0.1', 'client_port': 51003, 'headers': {'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"macOS"', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-US,en;q=0.9'}}
+2025-08-29 19:01:42,370 - INFO - Response: {'status_code': 200, 'headers': {'content-length': '43', 'content-type': 'application/json'}}
+2025-08-29 19:01:42,441 - INFO - Request: {'timestamp': '2025-08-29T19:01:42.441309', 'method': 'GET', 'url': 'http://127.0.0.1:8000/favicon.ico', 'client_host': '127.0.0.1', 'client_port': 51003, 'headers': {'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', 'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"', 'sec-ch-ua-mobile': '?0', 'accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'no-cors', 'sec-fetch-dest': 'image', 'referer': 'http://127.0.0.1:8000/', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-US,en;q=0.9'}}
+2025-08-29 19:01:42,442 - INFO - Response: {'status_code': 404, 'headers': {'content-length': '22', 'content-type': 'application/json'}}
+2025-08-29 19:01:53,436 - INFO - Request: {'timestamp': '2025-08-29T19:01:53.436172', 'method': 'GET', 'url': 'http://127.0.0.1:8000/register', 'client_host': '127.0.0.1', 'client_port': 51095, 'headers': {'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"macOS"', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-US,en;q=0.9'}}
+2025-08-29 19:01:53,436 - INFO - Response: {'status_code': 307, 'headers': {'content-length': '0', 'location': 'http://127.0.0.1:8000/register/'}}
+2025-08-29 19:01:53,442 - INFO - Request: {'timestamp': '2025-08-29T19:01:53.441989', 'method': 'GET', 'url': 'http://127.0.0.1:8000/register/', 'client_host': '127.0.0.1', 'client_port': 51095, 'headers': {'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"macOS"', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-US,en;q=0.9'}}
+2025-08-29 19:01:53,442 - INFO - Response: {'status_code': 405, 'headers': {'allow': 'POST', 'content-length': '31', 'content-type': 'application/json'}}
+2025-08-29 19:03:59,832 - INFO - Request: {'timestamp': '2025-08-29T19:03:59.832457', 'method': 'GET', 'url': 'http://localhost:8000/register', 'client_host': '127.0.0.1', 'client_port': 52167, 'headers': {'content-type': 'application/json', 'authorization': 'Basic Og==', 'user-agent': 'PostmanRuntime/7.45.0', 'accept': '*/*', 'postman-token': '22273d02-6d9c-42ed-bea8-17b0cc167435', 'host': 'localhost:8000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '117'}}
+2025-08-29 19:03:59,835 - INFO - Response: {'status_code': 307, 'headers': {'content-length': '0', 'location': 'http://localhost:8000/register/'}}
+2025-08-29 19:03:59,840 - INFO - Request: {'timestamp': '2025-08-29T19:03:59.840418', 'method': 'GET', 'url': 'http://localhost:8000/register/', 'client_host': '127.0.0.1', 'client_port': 52167, 'headers': {'content-type': 'application/json', 'authorization': 'Basic Og==', 'user-agent': 'PostmanRuntime/7.45.0', 'accept': '*/*', 'postman-token': '22273d02-6d9c-42ed-bea8-17b0cc167435', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '117', 'referer': 'http://localhost:8000/register', 'host': 'localhost:8000'}}
+2025-08-29 19:03:59,842 - INFO - Response: {'status_code': 405, 'headers': {'allow': 'POST', 'content-length': '31', 'content-type': 'application/json'}}
+2025-08-29 19:08:30,649 - INFO - Request: {'timestamp': '2025-08-29T19:08:30.649512', 'method': 'POST', 'url': 'http://localhost:8000/register', 'client_host': '127.0.0.1', 'client_port': 54420, 'headers': {'content-type': 'application/json', 'authorization': 'Basic Og==', 'user-agent': 'PostmanRuntime/7.45.0', 'accept': '*/*', 'postman-token': 'f7096a3a-7336-4f79-852a-9fb215088e58', 'host': 'localhost:8000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '117'}}
+2025-08-29 19:08:30,652 - INFO - Response: {'status_code': 307, 'headers': {'content-length': '0', 'location': 'http://localhost:8000/register/'}}
+2025-08-29 19:08:30,654 - INFO - Request: {'timestamp': '2025-08-29T19:08:30.654314', 'method': 'POST', 'url': 'http://localhost:8000/register/', 'client_host': '127.0.0.1', 'client_port': 54420, 'headers': {'content-type': 'application/json', 'authorization': 'Basic Og==', 'user-agent': 'PostmanRuntime/7.45.0', 'accept': '*/*', 'postman-token': 'f7096a3a-7336-4f79-852a-9fb215088e58', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '117', 'referer': 'http://localhost:8000/register', 'host': 'localhost:8000'}}
+2025-08-29 19:08:30,658 - INFO - BEGIN (implicit)
+2025-08-29 19:08:30,662 - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-08-29 19:08:30,662 - INFO - [generated in 0.00044s] ('abdullateef',)
+2025-08-29 19:08:30,664 - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.is_active 
+FROM user 
+WHERE user.email = ?
+2025-08-29 19:08:30,665 - INFO - [generated in 0.00022s] ('lateefmikail@gamil.com',)
+2025-08-29 19:08:30,933 - INFO - INSERT INTO user (username, email, hashed_password, is_active) VALUES (?, ?, ?, ?)
+2025-08-29 19:08:30,933 - INFO - [generated in 0.00016s] ('abdullateef', 'lateefmikail@gamil.com', '$2b$12$Ynlwl0yaqGLOwgfCfYefHOaOGspcxfoD9EanNTv51..eg0nAh895a', 1)
+2025-08-29 19:08:30,933 - INFO - COMMIT
+2025-08-29 19:08:30,935 - INFO - BEGIN (implicit)
+2025-08-29 19:08:30,936 - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.is_active 
+FROM user 
+WHERE user.id = ?
+2025-08-29 19:08:30,936 - INFO - [generated in 0.00007s] (1,)
+2025-08-29 19:08:30,937 - INFO - Response: {'status_code': 201, 'headers': {'content-length': '211', 'content-type': 'application/json'}}
+2025-08-29 19:08:30,937 - INFO - ROLLBACK
+2025-08-29 19:11:10,398 - INFO - Request: {'timestamp': '2025-08-29T19:11:10.398186', 'method': 'GET', 'url': 'http://localhost:8000/docs', 'client_host': '127.0.0.1', 'client_port': 55769, 'headers': {'host': 'localhost:8000', 'connection': 'keep-alive', 'sec-ch-ua': '"Not;A=Brand";v="99", "Brave";v="139", "Chromium";v="139"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"macOS"', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8', 'sec-gpc': '1', 'accept-language': 'en-US,en;q=0.7', 'sec-fetch-site': 'cross-site', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br, zstd', 'cookie': 'csrftoken=6PJiQgqw4DC945bjaETb9CBN6WbC3ma7'}}
+2025-08-29 19:11:10,401 - INFO - Response: {'status_code': 200, 'headers': {'content-length': '957', 'content-type': 'text/html; charset=utf-8'}}
+2025-08-29 19:11:12,781 - INFO - Request: {'timestamp': '2025-08-29T19:11:12.781260', 'method': 'GET', 'url': 'http://localhost:8000/openapi.json', 'client_host': '127.0.0.1', 'client_port': 55769, 'headers': {'host': 'localhost:8000', 'connection': 'keep-alive', 'sec-ch-ua-platform': '"macOS"', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', 'accept': 'application/json,*/*', 'sec-ch-ua': '"Not;A=Brand";v="99", "Brave";v="139", "Chromium";v="139"', 'sec-ch-ua-mobile': '?0', 'sec-gpc': '1', 'accept-language': 'en-US,en;q=0.7', 'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'cors', 'sec-fetch-dest': 'empty', 'referer': 'http://localhost:8000/docs', 'accept-encoding': 'gzip, deflate, br, zstd', 'cookie': 'csrftoken=6PJiQgqw4DC945bjaETb9CBN6WbC3ma7'}}
+2025-08-29 19:11:12,792 - INFO - Response: {'status_code': 200, 'headers': {'content-length': '6981', 'content-type': 'application/json'}}
+2025-08-29 19:40:06,698 - INFO - Request: {'timestamp': '2025-08-29T19:40:06.698009', 'method': 'GET', 'url': 'http://127.0.0.1:8000/register', 'client_host': '127.0.0.1', 'client_port': 58564, 'headers': {'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"macOS"', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', 'sec-purpose': 'prefetch;prerender', 'purpose': 'prefetch', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-US,en;q=0.9'}}
+2025-08-29 19:40:06,700 - INFO - Response: {'status_code': 307, 'headers': {'content-length': '0', 'location': 'http://127.0.0.1:8000/register/'}}
+2025-08-29 19:40:06,705 - INFO - Request: {'timestamp': '2025-08-29T19:40:06.705697', 'method': 'GET', 'url': 'http://127.0.0.1:8000/register/', 'client_host': '127.0.0.1', 'client_port': 58564, 'headers': {'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'upgrade-insecure-requests': '1', 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36', 'sec-purpose': 'prefetch;prerender', 'purpose': 'prefetch', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'sec-ch-ua': '"Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"macOS"', 'accept-encoding': 'gzip, deflate, br, zstd', 'accept-language': 'en-US,en;q=0.9'}}
+2025-08-29 19:40:06,707 - INFO - Response: {'status_code': 405, 'headers': {'allow': 'POST', 'content-length': '31', 'content-type': 'application/json'}}
+2025-08-29 19:43:43,743 - INFO - Request: {'timestamp': '2025-08-29T19:43:43.743755', 'method': 'POST', 'url': 'http://localhost:8000/students/', 'client_host': '127.0.0.1', 'client_port': 60419, 'headers': {'host': 'localhost:8000', 'user-agent': 'curl/8.7.1', 'accept': '*/*', 'content-type': 'application/json', 'authorization': 'Basic dGVhY2hlcjE6dGVhY2hlcjEyMw==', 'content-length': '79'}}
+2025-08-29 19:43:43,753 - INFO - BEGIN (implicit)
+2025-08-29 19:43:43,755 - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-08-29 19:43:43,755 - INFO - [cached since 680.6s ago] ('teacher1',)
+2025-08-29 19:43:43,759 - INFO - ROLLBACK
+2025-08-29 19:43:43,760 - INFO - Response: {'status_code': 401, 'headers': {'www-authenticate': 'Basic', 'content-length': '32', 'content-type': 'application/json'}}
+2025-08-29 19:44:50,253 - INFO - Request: {'timestamp': '2025-08-29T19:44:50.253588', 'method': 'GET', 'url': 'http://localhost:8000/users/', 'client_host': '127.0.0.1', 'client_port': 60975, 'headers': {'content-type': 'application/json', 'authorization': 'Basic Og==', 'user-agent': 'PostmanRuntime/7.45.0', 'accept': '*/*', 'postman-token': 'b44b264b-ae23-4c04-8ec4-8e160d2c2537', 'host': 'localhost:8000', 'accept-encoding': 'gzip, deflate, br', 'connection': 'keep-alive', 'content-length': '117'}}
+2025-08-29 19:44:50,256 - INFO - BEGIN (implicit)
+2025-08-29 19:44:50,256 - INFO - SELECT user.id, user.username, user.email, user.hashed_password, user.is_active 
+FROM user 
+WHERE user.username = ?
+2025-08-29 19:44:50,257 - INFO - [cached since 747.1s ago] ('',)
+2025-08-29 19:44:50,257 - INFO - ROLLBACK
+2025-08-29 19:44:50,258 - INFO - Response: {'status_code': 401, 'headers': {'www-authenticate': 'Basic', 'content-length': '32', 'content-type': 'application/json'}}

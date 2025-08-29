@@ -1,0 +1,116 @@
+# Student Management System
+
+A robust FastAPI backend application for managing students and their grades with authentication, authorization, and database integration.
+
+## 🚀 Features
+
+- **Student CRUD Operations**: Create, read, update, and delete student records
+- **Grade Management**: Add and view grades for students
+- **Authentication & Authorization**: Basic authentication with password hashing
+- **Database Integration**: SQLModel with SQLite database
+- **User Management**: Register new users and manage permissions
+- **Request Logging**: Middleware to log all requests to a file
+- **CORS Support**: Configured for frontend development
+- **Search & Filter**: Search students by name and filter by age range
+
+## 📋 Prerequisites
+
+- Python 3.8+
+- pip (Python package manager)
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/abdullateef-max/fastAPI-3.git
+   cd fastAPI-3
+
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Running the Application
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+# Access the application
+
+API Documentation: http://localhost:8000/docs
+
+Alternative Docs: http://localhost:8000/redoc
+
+Base URL: http://localhost:8000
+
+# 🔐 Default Credentials
+Username: admin
+Password: admin123
+
+# 📊 API Endpoints
+Authentication & Users
+POST /register/ - Register new user
+
+GET /users/me/ - Get current user info (protected)
+
+GET /users/ - Get all users (admin only)
+
+# Student Management
+POST /students/ - Create student (protected)
+
+GET /students/ - Get all students
+
+GET /students/{id} - Get student by ID
+
+PUT /students/{id} - Update student (protected)
+
+DELETE /students/{id} - Delete student (protected)
+
+# Grade Management
+POST /students/{id}/grades - Add grade to student (protected)
+
+GET /students/{id}/grades - Get student grades
+
+Search & Filter
+GET /students/search/{name} - Search students by name
+
+GET /students/age/{min_age}/{max_age} - Filter students by age range
+
+🗄️ Database Schema
+Students Table
+id (Integer, Primary Key)
+
+name (String, Indexed)
+
+age (Integer)
+
+email (String, Unique, Indexed)
+
+grades (String - JSON encoded)
+
+Users Table
+id (Integer, Primary Key)
+
+username (String, Unique, Indexed)
+
+email (String, Unique, Indexed)
+
+hashed_password (String)
+
+is_active (Boolean)
+
+🔧 Configuration
+CORS Settings
+Configured to allow requests from:
+
+http://localhost:3000 (React/Vue frontend)
+
+Database
+SQLite database file: students.db
+
+Automatic table creation on startup
+
+Logging
+Log file: app.log
+
+Logs all requests with timestamps, methods, URLs, and response data
