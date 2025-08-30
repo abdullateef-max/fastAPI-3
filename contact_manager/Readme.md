@@ -14,7 +14,7 @@ CORS Enabled: Cross-Origin Resource Sharing support
 
 SQL Database: SQLite database with SQLModel ORM
 
-Input Validation: Comprehensive data validation
+Input Validation: Comprehensive data validation 
 
 API Endpoints
 Authentication Endpoints
