@@ -127,7 +127,7 @@ def create_default_user():
     if "admin" not in users:
         users["admin"] = {
             "username": "admin",
-            "email": "admin@school.com",
+            "email": "admin@kodecamp.com",
             "hashed_password": hash_password("admin123"),
             "is_active": True
         }
